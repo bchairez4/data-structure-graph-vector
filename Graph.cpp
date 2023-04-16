@@ -7,7 +7,7 @@ template <class T>
 Graph<T>::Graph() {}
 
 template <class T>
-Graph<T>::Graph(std::vector<Node<T>*> adjacency_list) {
+Graph<T>::Graph(const std::vector<Node<T>*> adjacency_list) {
     copy_(adjacency_list);
 }
 
@@ -148,7 +148,7 @@ void Graph<T>::printAdjacencyList() const {
     Private Functions
 *****************************************************************************/
 template <class T>
-void Graph<T>::copy_(std::vector<Node<T>*>& adjacency_list) {
+void Graph<T>::copy_(const std::vector<Node<T>*>& adjacency_list) {
     for (int i = 0; i < adjacency_list.size(); ++i) {
         Node<T>* new_node = new Node<T>(adjacency_list[i]->getData(), adjacency_list[i]->getEdgeList());
         adjacency_list_.push_back(new_node);
