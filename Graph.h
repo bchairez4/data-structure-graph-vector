@@ -21,7 +21,7 @@ class Graph {
         void erase_neighbors_(Node<T>*& node);
     public:
         Graph();
-        Graph(const std::vector<Node<T>*> adjacency_list);
+        Graph(const std::vector<Node<T>*>& adjacency_list);
         Graph(const Graph<T>& other);
         ~Graph();
         T& operator=(const Graph<T>& other);
