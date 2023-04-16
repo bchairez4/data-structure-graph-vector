@@ -10,7 +10,7 @@ template <class T>
 Node<T>::Node(const T& data) : data_(data) {}
  
 template <class T>
-Node<T>::Node(const T& data, const std::vector<Node<T>*> edge_list) : data_(data) {
+Node<T>::Node(const T& data, const std::vector<Node<T>*>& edge_list) : data_(data) {
     copy_(edge_list);
 }
 
