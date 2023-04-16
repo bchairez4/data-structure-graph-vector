@@ -10,12 +10,12 @@ class Node {
         T data_;
         std::vector<Node<T>*> edge_list_;
 
-        void copy_(std::vector<Node<T>*>& edge_list);
+        void copy_(const std::vector<Node<T>*>& edge_list);
         int search_(Node<T>*& node) const;
     public:
         Node();
         Node(const T& data);
-        Node(const T& data, std::vector<Node<T>*> edge_list);
+        Node(const T& data, const std::vector<Node<T>*> edge_list);
         Node(const Node<T>& other);
         ~Node();
         T& operator=(const Node<T>& other);
