@@ -7,7 +7,7 @@ template <class T>
 Graph<T>::Graph() {}
 
 template <class T>
-Graph<T>::Graph(const std::vector<Node<T>*> adjacency_list) {
+Graph<T>::Graph(const std::vector<Node<T>*>& adjacency_list) {
     copy_(adjacency_list);
 }
 
