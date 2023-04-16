@@ -15,7 +15,7 @@ class Node {
     public:
         Node();
         Node(const T& data);
-        Node(const T& data, const std::vector<Node<T>*> edge_list);
+        Node(const T& data, const std::vector<Node<T>*>& edge_list);
         Node(const Node<T>& other);
         ~Node();
         T& operator=(const Node<T>& other);
