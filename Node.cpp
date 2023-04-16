@@ -10,7 +10,7 @@ template <class T>
 Node<T>::Node(const T& data) : data_(data) {}
  
 template <class T>
-Node<T>::Node(const T& data, std::vector<Node<T>*> edge_list) : data_(data) {
+Node<T>::Node(const T& data, const std::vector<Node<T>*> edge_list) : data_(data) {
     copy_(edge_list);
 }
 
@@ -126,7 +126,7 @@ void Node<T>::printNeighbors() const {
     Private Functions
 *****************************************************************************/
 template <class T>
-void Node<T>::copy_(std::vector<Node<T>*>& edge_list) {
+void Node<T>::copy_(const std::vector<Node<T>*>& edge_list) {
     for (int i = 0; i < edge_list.size(); ++i) {
         Node<T>* node_ptr = edge_list[i];
         edge_list_.push_back(node_ptr);
