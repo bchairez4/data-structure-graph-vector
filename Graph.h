@@ -16,12 +16,12 @@ class Graph {
     private:
         std::vector<Node<T>*> adjacency_list_;
 
-        void copy_(std::vector<Node<T>*>& adjacency_list);
+        void copy_(const std::vector<Node<T>*>& adjacency_list);
         int search_(const T& data) const;
         void erase_neighbors_(Node<T>*& node);
     public:
         Graph();
-        Graph(std::vector<Node<T>*> adjacency_list);
+        Graph(const std::vector<Node<T>*> adjacency_list);
         Graph(const Graph<T>& other);
         ~Graph();
         T& operator=(const Graph<T>& other);
