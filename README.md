@@ -8,3 +8,5 @@ The vector of nodes acts as the adjacency list and each node in the vector conta
 
 Both the adjacency list and the edge list are implemented using raw pointers. 
 This is done so the adjacency list can call "new" (as well as "delete" to memory manage) to create new nodes when needed and each node's neighbor in the adjacency list can simply point to the node that has been already created that its directed to to minimize space usage.
+
+Current Issue: erase_neighbors() when deleting a node vertex from the adjacency list does not function corrently. Only if the very first neighbor in a vertex's edge list is the corresponding node will it successfully remove. Neighbors located in the middle or the end of the edge list do not get removed.
