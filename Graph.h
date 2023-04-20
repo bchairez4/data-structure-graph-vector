@@ -1,7 +1,6 @@
 /*****************************************************************************
 *    Brian Chairez                                                           *
 *    Goal: Implementation of Graph using a vector of vectors                 *
-*    Progess: Basic implementation and methods complete                      *
 *****************************************************************************/
 
 // This is an unweighted directional graph: Meaning each edge has to be explicitly stated, node to node
