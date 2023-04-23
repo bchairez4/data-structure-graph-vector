@@ -64,7 +64,7 @@ void Node<T>::removeEdge(Node<T>*& node) {
     //Get an iterator to the node location
     std::vector<Node<int>*>::iterator it = edge_list_.begin();
     for (; it != edge_list_.end(); ++it) {
-        if ((*it) == node) {
+        if ((*it)->getData() == node->getData()) {
             //Handle the pointer
             int i_index = search_(node);
             edge_list_[i_index] = nullptr;
@@ -96,7 +96,7 @@ bool Node<T>::contains(Node<T>*& node) const {
     }
 
     for (int i = 0; i < edge_list_.size(); ++i) {
-        if (edge_list_[i] == node) {
+        if (edge_list_[i]->getData() == node->getData()) {
             return true;
         }
     }
