@@ -61,7 +61,7 @@ void Graph<T>::removeVertex(const T& data) {
     Node<T>* node_ptr = nullptr;
     for (; it != adjacency_list_.end(); ++it) {
         if ((*it)->getData() == data) {
-            //Free the memory first then erase node from neighbor pointers
+            //Free the neighbors first, then free the memory and set it to null
             int i_index = search_(data);
             node_ptr = adjacency_list_[i_index];
             erase_neighbors_(node_ptr);
