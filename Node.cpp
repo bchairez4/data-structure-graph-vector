@@ -144,7 +144,7 @@ void Node<T>::printNeighbors() const {
 template <class T>
 int Node<T>::search_(Node<T>*& node) const {
     for (int i = 0; i < edge_list_.size(); ++i) {
-        if (edge_list_[i] == node) {
+        if (edge_list_[i]->getData() == node->getData()) {
             return i;
         }
     }
