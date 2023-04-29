@@ -170,7 +170,7 @@ int Graph<T>::search_(const T& data) const {
     return -1;
 }
 
-// Time Complexity: O(N), where N is the number of nodes in the adjacency list 
+// Time Complexity: O(NM), where N is the number of nodes in the adjacency list and M is the number of edges in the edge list
 template <class T>
 void Graph<T>::copy_(const std::vector<Node<T>*>& adjacency_list) {
     for (int i = 0; i < adjacency_list.size(); ++i) {
